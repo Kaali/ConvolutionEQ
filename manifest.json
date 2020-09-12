@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Convolution EQ",
+	"version": "0.0.1",
+	"description": "Apply a convolution equalizer in tabs",
+	"permissions": ["tabCapture"],
+	"content_scripts": [
+		{
+			"matches": ["https://*/*", "http://*/*"],
+			"js": ["content.js"]
+		}
+	],
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"browser_action": {
+		"default_popup": "popup.html"
+    }
+}
